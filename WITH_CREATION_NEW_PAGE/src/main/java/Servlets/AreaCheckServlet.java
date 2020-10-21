@@ -41,7 +41,7 @@ public class AreaCheckServlet extends HttpServlet {
 
                 }
             } else resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
-        } catch (Exception e) {
+        } catch (NullPointerException | NumberFormatException e) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
         }
     }
